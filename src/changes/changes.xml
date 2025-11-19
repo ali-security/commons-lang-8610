@@ -71,6 +71,7 @@ The <action> type attribute can be add,update,fix,remove.
     <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add RuntimeEnvironment.inContainer() #1241.</action>
     <action                   type="add" dev="ggregory" due-to="Gary Gregory">Add AppendableJoiner and refactor string joining #1244.</action>
     <!-- FIX -->
+    <action                   type="fix" dev="ggregory" due-to="OSS-Fuzz, Gary Gregory">Rewrite ClassUtils.getClass(...) without recursion to avoid StackOverflowError on very long inputs. OSS-Fuzz Issue 42522972: apache-commons-text:StringSubstitutorInterpolatorFuzzer: Security exception in org.apache.commons.lang3.ClassUtils.getClass.</action>
     <action                   type="fix" dev="ggregory" due-to="Miklós Karakó, Gary Gregory">Improve Javadoc in ExceptionUtils #1136.</action>
     <action                   type="fix" dev="ggregory" due-to="Saiharshith Karuneegar Ramesh, Gary Gregory">Fixed two non-deterministic tests in EnumUtilsTest.java #1131.</action>
     <action issue="LANG-1721" type="fix" dev="ggregory" due-to="Arthur Chan, Gary Gregory">Fix wrong number check that cause StringIndexOutOfBoundsException #1140.</action>
