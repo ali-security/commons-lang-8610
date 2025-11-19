@@ -27,7 +27,7 @@ jobs:
     continue-on-error: ${{ matrix.experimental }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-13]
+        os: [ubuntu-24.04, windows-2022, macos-13]
         java: [ 8, 11, 17, 21, 22 ]
         experimental: [false]
 #        include:
@@ -52,7 +52,7 @@ jobs:
     - name: Build with Maven
       run: mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all
     - name: Upload JAR artifact
-      if: matrix.os == 'ubuntu-latest' && matrix.java == '11'
+      if: matrix.os == 'ubuntu-24.04' && matrix.java == '11'
       uses: actions/upload-artifact@v4
       with:
         name: jar-artifact
